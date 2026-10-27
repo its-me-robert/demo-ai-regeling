@@ -5,7 +5,6 @@
       "Glob",
       "Grep",
       "Edit(/pakket/**)",
-      "Write(/pakket/**)",
       "Bash(npm run controleer)",
       "Bash(npm run formulier)",
       "Bash(npm run formulier:open)",
@@ -25,7 +24,6 @@
     ],
     "deny": [
       "Edit(/regeling/**)",
-      "Write(/regeling/**)",
       "Bash(git merge*)",
       "Bash(gh pr merge*)"
     ]

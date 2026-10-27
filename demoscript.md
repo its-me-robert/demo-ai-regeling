@@ -4,7 +4,7 @@
 
 ## Vooraf (5 min voor de start)
 1. `powershell -ExecutionPolicy Bypass -File .\reset-demo.ps1`: beginstand.
-2. Open de map `C:\git\demo-ai-regeling` in VS Code (of in de desktop-app: Code-tab, map kiezen) en start een **nieuwe** Claude-sessie.
+2. Open de map `C:\git\demo-ai-regeling` in VS Code (of in de desktop-app: Code-tab, map kiezen) en start een **nieuwe** Claude-sessie. De eerste keer vraagt Claude of je de map **vertrouwt**: zeg ja, anders gelden de toestemmingen uit `.claude/settings.json` niet. Doe dat bij het oefenen, niet live.
 3. Open `formulier.html` in de browser (`npm run formulier:open`) en `wijzigingsverzoeken/WV-001-vrijwilligers.md` in VS Code. Zet een tab klaar met de repo op GitHub.
 4. Lettergrootte omhoog. Meldingen uit.
 

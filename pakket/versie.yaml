@@ -1,6 +1,9 @@
-versie: 1.0.0
+versie: 1.1.0
 geldigVanaf: "2026-09-01"
 wijzigingen:
+  - versie: 1.1.0
+    datum: "2026-10-27"
+    omschrijving: "WV-001: nieuwe vraag naar het aantal vrijwilligers (signalering onder 2)."
   - versie: 1.0.0
     datum: "2026-08-01"
     omschrijving: "Eerste versie."

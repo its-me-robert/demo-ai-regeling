@@ -1,7 +1,9 @@
 // Maakt formulier.html: het aanvraagformulier zoals een aanvrager het ziet, in de huisstijl van ROOS
 // (RVO-ontwerpsysteem, uit node_modules/@nl-rvo). Gebruik: npm run formulier
 // Vragen die er bij de tag "beginstand" nog niet waren, krijgen het label NIEUW.
-import { writeFileSync } from 'node:fs';
+// Het bestand is zelfstandig: CSS, lettertype en iconen staan erin, want browsers laden
+// lettertypen en iconen niet vanaf file://.
+import { writeFileSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { parse } from 'yaml';
@@ -74,14 +76,24 @@ const stappen = p.wizard.stappen.map((stap, i) => `<section class="rvo-card rvo-
   </div>
 </section>`).join('\n');
 
-const roos = 'node_modules/@nl-rvo';
+// ROOS-CSS inlezen. Lettertype (alleen Rijks Sans) en het gebruikte icoon als data-URI.
+const roos = join(root, 'node_modules/@nl-rvo');
+const css = (pad) => readFileSync(join(roos, pad), 'utf8');
+const base64 = (pad) => readFileSync(join(roos, pad)).toString('base64');
+const lettertype = css('assets/fonts/index.css').split('@font-face')
+  .filter((blok) => blok.includes('.woff2'))
+  .map((blok) => '@font-face' + blok.replace(/url\("\.\/([^"]+)"\)/, (_, f) => `url(data:font/woff2;base64,${base64('assets/fonts/' + f)})`))
+  .join('\n');
+const iconen = ['waarschuwing'].map((naam) =>
+  `.rvo-theme{--rvo-icon-${naam}:url(data:image/svg+xml;base64,${base64(`assets/icons/status/${naam}.svg`)})}.rvo-icon-${naam}{--rvo-icon-current:var(--rvo-icon-${naam})}`).join('\n');
+
 const html = `<!doctype html>
 <html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(t.titel)}</title>
-<link rel="stylesheet" href="${roos}/assets/fonts/index.css">
-<link rel="stylesheet" href="${roos}/assets/icons/index.css">
-<link rel="stylesheet" href="${roos}/design-tokens/dist/index.css">
-<link rel="stylesheet" href="${roos}/component-library-css/dist/index.css">
+<style>${lettertype}</style>
+<style>${css('design-tokens/dist/index.css')}</style>
+<style>${css('component-library-css/dist/index.min.css')}</style>
+<style>${iconen}</style>
 <style>
 /* Alleen wat ROOS niet zelf regelt: de demolabels en de opbouw van de pagina. */
 body { margin:0; background:var(--rvo-color-grijs-050, #f8fafc); }

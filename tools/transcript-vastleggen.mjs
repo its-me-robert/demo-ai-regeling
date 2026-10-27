@@ -29,7 +29,7 @@ if (existsSync(subMap))
 const geheim = /(gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-ant-[A-Za-z0-9-]{20,}|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY-----|"password"\s*:\s*"[^"]+")/;
 for (const [bron] of bestanden) {
   const m = readFileSync(bron, 'utf8').match(geheim);
-  if (m) { console.error(`Gestopt: mogelijk geheim gevonden in ${bron} (${m[0].slice(0, 12)}…). Niets vastgelegd.`); process.exit(1); }
+  if (m) { console.error(`Gestopt: mogelijk geheim gevonden in ${bron} (${m[0].slice(0, 4)}…). Niets vastgelegd.`); process.exit(1); }
 }
 
 const branch = execFileSync('git', ['branch', '--show-current'], { cwd: root, encoding: 'utf8' }).trim();

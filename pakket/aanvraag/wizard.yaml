@@ -12,6 +12,7 @@ stappen:
       - { pad: activiteit.categorie, type: keuze, req: [REQ-FB-002] }
       - { pad: activiteit.datum, type: datum, req: [REQ-FB-002] }
       - { pad: activiteit.aantalDeelnemers, type: getal, req: [REQ-FB-002] }
+      - { pad: activiteit.aantalVrijwilligers, type: getal, req: [REQ-FB-007], signalering: { onder: 2 } }
   - id: bijdrage
     velden:
       # Een maximum blokkeert niet: de aanvrager ziet een signalering en kan toch indienen.

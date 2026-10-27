@@ -15,13 +15,14 @@
     },
     "activiteit": {
       "type": "object",
-      "required": ["titel", "omschrijving", "categorie", "datum", "aantalDeelnemers"],
+      "required": ["titel", "omschrijving", "categorie", "datum", "aantalDeelnemers", "aantalVrijwilligers"],
       "properties": {
         "titel": { "type": "string", "minLength": 3, "maxLength": 120 },
         "omschrijving": { "type": "string", "minLength": 20, "maxLength": 1000 },
         "categorie": { "enum": ["sport", "cultuur", "groen"] },
         "datum": { "type": "string", "format": "date" },
-        "aantalDeelnemers": { "type": "integer", "minimum": 1, "maximum": 10000 }
+        "aantalDeelnemers": { "type": "integer", "minimum": 1, "maximum": 10000 },
+        "aantalVrijwilligers": { "type": "integer", "minimum": 0, "maximum": 1000 }
       }
     },
     "gevraagdBedrag": { "type": "number", "exclusiveMinimum": 0 },

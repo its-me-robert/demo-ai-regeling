@@ -16,6 +16,10 @@ velden:
     opties: { sport: "Sport en bewegen", cultuur: "Cultuur", groen: "Groen in de buurt" }
   activiteit.datum: { label: "Op welke datum is de activiteit?" }
   activiteit.aantalDeelnemers: { label: "Hoeveel mensen doen ongeveer mee?" }
+  activiteit.aantalVrijwilligers:
+    label: "Hoeveel vrijwilligers uit de buurt helpen mee?"
+    hulp: "Vrijwilligers helpen zonder betaling mee, bij de voorbereiding of op de dag zelf. Helpt u zelf als vrijwilliger mee? Tel uzelf dan ook mee."
+    signalering: "U noemt minder dan 2 vrijwilligers. U kunt de aanvraag toch indienen. Bij de beoordeling kijken we hoeveel vrijwilligers uit de buurt meehelpen."
   gevraagdBedrag:
     label: "Welk bedrag vraagt u aan?"
     hulp: "U kunt maximaal 5.000 euro krijgen."

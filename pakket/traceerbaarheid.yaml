@@ -6,3 +6,4 @@ eisen:
   REQ-FB-004: { omschrijving: "Andere financiering melden, met toelichting.", bron: "Artikel 4" }
   REQ-FB-005: { omschrijving: "Optioneel een activiteitenplan meesturen.", bron: "Artikel 5" }
   REQ-FB-006: { omschrijving: "Aanvrager verklaart de gegevens naar waarheid te hebben ingevuld.", bron: "Artikel 4" }
+  REQ-FB-007: { omschrijving: "Aantal vrijwilligers uit de buurt. De drempel van 2 is een wens van de PO (WV-001), geen eis uit de regeling: alleen een signalering.", bron: "Artikel 6 lid 2" }

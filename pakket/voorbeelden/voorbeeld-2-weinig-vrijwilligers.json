@@ -1,0 +1,7 @@
+{
+  "aanvrager": { "kvkNummer": "99999902", "naam": "Vereniging Parkbuurt (fictief)", "adres": "Proefstraat 1, 1234 AB Testdorp" },
+  "activiteit": { "titel": "Buurtschilderdag", "omschrijving": "Wij schilderen samen met bewoners de bankjes in het park.", "categorie": "cultuur", "datum": "2026-11-14", "aantalDeelnemers": 40, "aantalVrijwilligers": 1 },
+  "gevraagdBedrag": 400,
+  "andereFinanciering": false,
+  "verklaring": true
+}

@@ -32,7 +32,7 @@ Geef het plan in hooguit 6 regels: per bestand wat je doet, met de antwoorden ui
 1. Maak een branch `wv-<nummer>-<kort-onderwerp>` (bv. `wv-001-vrijwilligers`) vanaf `main`.
 2. Wijzig de bestanden. Volg het patroon van bestaande vragen: een signalering gaat zoals bij `gevraagdBedrag`.
 3. Werk de voorbeeldaanvraag bij, zodat die geldig blijft.
-4. Verhoog de versie in `versie.yaml` (minor) en voeg een regel toe aan `wijzigingen`, met het WV-nummer.
+4. Verhoog de versie in `versie.yaml` (minor) en voeg een regel toe aan `wijzigingen`, met het WV-nummer. Laat `geldigVanaf` staan, tenzij het verzoek een datum noemt.
 5. Draai `npm run controleer`. Is iets rood, herstel het en draai opnieuw. Laat de uitkomst zien.
 6. Draai `npm run formulier:open`, zodat de mens het nieuwe formulier ziet. De nieuwe vraag is groen gemarkeerd.
 

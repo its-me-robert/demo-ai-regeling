@@ -16,11 +16,12 @@ Een kleine, volledige Claude Code-opzet om te laten zien hoe je met AI aan een r
 
 ## Starten
 Vereist: Node 24 (LTS), git, de GitHub-CLI (`gh`), Claude Code (VS Code-extensie, desktop-app of CLI).
+In PowerShell: gebruik `npm.cmd` (of sta scripts toe met `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`).
 
 ```
-npm ci
-npm run controleer
-npm run formulier:open
+npm.cmd ci
+npm.cmd run controleer
+npm.cmd run formulier:open
 ```
 
 ## Opnieuw beginnen

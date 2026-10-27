@@ -1,0 +1,31 @@
+titel: "FICTIEF — Buurtbijdrage aanvragen"
+intro: "Vraag een kleine bijdrage aan voor een activiteit in uw buurt."
+stappen:
+  aanvrager: { titel: "Uw organisatie" }
+  activiteit: { titel: "De activiteit" }
+  bijdrage: { titel: "Uw bijdrage" }
+  indienen: { titel: "Controleren en indienen", intro: "Controleer uw gegevens. Klopt alles? Dan kunt u de aanvraag indienen." }
+velden:
+  aanvrager.kvkNummer: { label: "KvK-nummer", hulp: "8 cijfers." }
+  aanvrager.naam: { label: "Naam van uw organisatie" }
+  aanvrager.adres: { label: "Adres van uw organisatie" }
+  activiteit.titel: { label: "Naam van de activiteit" }
+  activiteit.omschrijving: { label: "Wat gaat u doen?", hulp: "Beschrijf in een paar zinnen wat er gebeurt en voor wie." }
+  activiteit.categorie:
+    label: "Wat voor activiteit is het?"
+    opties: { sport: "Sport en bewegen", cultuur: "Cultuur", groen: "Groen in de buurt" }
+  activiteit.datum: { label: "Op welke datum is de activiteit?" }
+  activiteit.aantalDeelnemers: { label: "Hoeveel mensen doen ongeveer mee?" }
+  gevraagdBedrag:
+    label: "Welk bedrag vraagt u aan?"
+    hulp: "U kunt maximaal 5.000 euro krijgen."
+    signalering: "U vraagt meer dan 5.000 euro. U kunt toch indienen, maar u krijgt maximaal 5.000 euro."
+  andereFinanciering:
+    label: "Krijgt u ook geld van anderen voor deze activiteit?"
+    opties: { "true": "Ja", "false": "Nee" }
+  andereFinancieringToelichting: { label: "Van wie krijgt u geld, en hoeveel?" }
+  activiteitenplan: { label: "Activiteitenplan (niet verplicht)", hulp: "PDF of Word, maximaal 10 MB." }
+  verklaring:
+    label: "Verklaring"
+    opties: { "true": "Ik verklaar dat ik alles naar waarheid heb ingevuld." }
+bevestiging: "Wij hebben uw aanvraag ontvangen."

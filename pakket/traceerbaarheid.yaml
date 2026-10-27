@@ -1,0 +1,8 @@
+# Elke eis (REQ) heeft een bron in de regeling. Elke vraag in het formulier hoort bij een eis.
+eisen:
+  REQ-FB-001: { omschrijving: "Aanvrager is een buurtorganisatie met KvK-nummer, naam en adres.", bron: "Artikel 3" }
+  REQ-FB-002: { omschrijving: "De activiteit heeft een naam, omschrijving, categorie, datum en verwacht aantal deelnemers.", bron: "Artikel 4" }
+  REQ-FB-003: { omschrijving: "Gevraagd bedrag; boven EUR 5.000 volgt een signalering.", bron: "Artikel 5" }
+  REQ-FB-004: { omschrijving: "Andere financiering melden, met toelichting.", bron: "Artikel 4" }
+  REQ-FB-005: { omschrijving: "Optioneel een activiteitenplan meesturen.", bron: "Artikel 5" }
+  REQ-FB-006: { omschrijving: "Aanvrager verklaart de gegevens naar waarheid te hebben ingevuld.", bron: "Artikel 4" }

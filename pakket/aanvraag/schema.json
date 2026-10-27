@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Aanvraag FICTIEF Buurtbijdrage",
+  "type": "object",
+  "required": ["aanvrager", "activiteit", "gevraagdBedrag", "andereFinanciering", "verklaring"],
+  "properties": {
+    "aanvrager": {
+      "type": "object",
+      "required": ["kvkNummer", "naam", "adres"],
+      "properties": {
+        "kvkNummer": { "type": "string", "pattern": "^[0-9]{8}$" },
+        "naam": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "adres": { "type": "string", "minLength": 5, "maxLength": 300 }
+      }
+    },
+    "activiteit": {
+      "type": "object",
+      "required": ["titel", "omschrijving", "categorie", "datum", "aantalDeelnemers"],
+      "properties": {
+        "titel": { "type": "string", "minLength": 3, "maxLength": 120 },
+        "omschrijving": { "type": "string", "minLength": 20, "maxLength": 1000 },
+        "categorie": { "enum": ["sport", "cultuur", "groen"] },
+        "datum": { "type": "string", "format": "date" },
+        "aantalDeelnemers": { "type": "integer", "minimum": 1, "maximum": 10000 }
+      }
+    },
+    "gevraagdBedrag": { "type": "number", "exclusiveMinimum": 0 },
+    "andereFinanciering": { "type": "boolean" },
+    "andereFinancieringToelichting": { "type": "string", "minLength": 5, "maxLength": 500 },
+    "activiteitenplan": { "type": "string" },
+    "verklaring": { "type": "boolean", "const": true }
+  }
+}

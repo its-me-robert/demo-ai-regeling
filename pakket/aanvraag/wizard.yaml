@@ -1,0 +1,28 @@
+# De stappen en vragen van het aanvraagformulier, in volgorde.
+stappen:
+  - id: aanvrager
+    velden:
+      - { pad: aanvrager.kvkNummer, type: tekst, req: [REQ-FB-001] }
+      - { pad: aanvrager.naam, type: tekst, req: [REQ-FB-001] }
+      - { pad: aanvrager.adres, type: tekst, req: [REQ-FB-001] }
+  - id: activiteit
+    velden:
+      - { pad: activiteit.titel, type: tekst, req: [REQ-FB-002] }
+      - { pad: activiteit.omschrijving, type: tekst, meerregelig: true, req: [REQ-FB-002] }
+      - { pad: activiteit.categorie, type: keuze, req: [REQ-FB-002] }
+      - { pad: activiteit.datum, type: datum, req: [REQ-FB-002] }
+      - { pad: activiteit.aantalDeelnemers, type: getal, req: [REQ-FB-002] }
+  - id: bijdrage
+    velden:
+      # Een maximum blokkeert niet: de aanvrager ziet een signalering en kan toch indienen.
+      - { pad: gevraagdBedrag, type: bedrag, req: [REQ-FB-003], signalering: { boven: 5000 } }
+      - { pad: andereFinanciering, type: keuze, req: [REQ-FB-004] }
+      - pad: andereFinancieringToelichting
+        type: tekst
+        meerregelig: true
+        req: [REQ-FB-004]
+        zichtbaarAls: { veld: andereFinanciering, is: true }
+      - { pad: activiteitenplan, type: upload, req: [REQ-FB-005] }
+  - id: indienen
+    velden:
+      - { pad: verklaring, type: keuze, req: [REQ-FB-006] }

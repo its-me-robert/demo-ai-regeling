@@ -1,0 +1,7 @@
+# Welke antwoorden het platform overneemt in de zaak. Antwoorden die hier niet staan,
+# blijven alleen in de aanvraaggegevens (en zijn wel zichtbaar voor de behandelaar).
+zaak:
+  aangevraagdBedrag: { pad: gevraagdBedrag, req: [REQ-FB-003] }
+aanvrager:
+  kvkNummer: { pad: aanvrager.kvkNummer, req: [REQ-FB-001] }
+  naam: { pad: aanvrager.naam, req: [REQ-FB-001] }

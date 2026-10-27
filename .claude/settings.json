@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Edit(/pakket/**)",
+      "Write(/pakket/**)",
+      "Bash(npm run controleer)",
+      "Bash(npm run formulier)",
+      "Bash(npm run formulier:open)",
+      "Bash(npm run transcript)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git branch*)",
+      "Bash(git switch -c wv-*)",
+      "Bash(git checkout -b wv-*)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ],
+    "ask": [
+      "Bash(git push*)",
+      "Bash(gh pr create*)"
+    ],
+    "deny": [
+      "Edit(/regeling/**)",
+      "Write(/regeling/**)",
+      "Bash(git merge*)",
+      "Bash(gh pr merge*)"
+    ]
+  }
+}

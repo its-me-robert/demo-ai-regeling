@@ -1,0 +1,7 @@
+{
+  "aanvrager": { "kvkNummer": "99999901", "naam": "Stichting Testbuurt (fictief)", "adres": "Proefstraat 1, 1234 AB Testdorp" },
+  "activiteit": { "titel": "Buurtmoestuin", "omschrijving": "Wij leggen samen met bewoners een kleine moestuin aan.", "categorie": "groen", "datum": "2026-11-14", "aantalDeelnemers": 40 },
+  "gevraagdBedrag": 1250,
+  "andereFinanciering": false,
+  "verklaring": true
+}

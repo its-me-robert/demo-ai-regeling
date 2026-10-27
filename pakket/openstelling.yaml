@@ -1,0 +1,9 @@
+index: 1
+korteNaam: "FICTIEF Buurtbijdrage najaar 2026"
+bron: "Artikel 7"
+periode:
+  begin: "2026-09-01T09:00:00+02:00"
+  eind: "2026-12-31T17:00:00+01:00"
+budget:
+  plafond: 50000
+  verdeelmethode: volgorde_van_binnenkomst
